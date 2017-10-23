@@ -1,6 +1,6 @@
 {
   "name": "safe-read-write",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Uses lockfile and mz (mz/fs) to write and read simple text files safely",
   "main": "index.js",
   "scripts": {
