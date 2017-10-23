@@ -1,8 +1,8 @@
 # safe-read-write
 
-Uses [lockfile](https://www.npmjs.com/package/lockfile) and [mz](https://www.npmjs.com/package/mz) to safely read and write simple text files. 
+Uses [lockfile](https://www.npmjs.com/package/lockfile) and [mz](https://www.npmjs.com/package/mz) to safely read and write simple text files.
 
-**Use case:** Needed for a node based http server application that does many small read/write operations. The server accepts requests and returns a `202 - Accepted`. The server contains a worker process that is executed using [spawn]() that does a potenaillay long (up to many minutes) process; during the process, the worker writes status information in JSON to a file. The client then polls for the status could get malformed JSON without safe-read-write. 
+**Use case:** Needed for a node based http server application that does many small read/write operations. The server accepts requests and returns a `202 - Accepted`. The server contains a worker process that is executed using [spawn](https://nodejs.org/api/child_process.html#child_process_child_process_spawn_command_args_options) that does a potenaillay long (up to many minutes) process; during the process, the worker writes status information in JSON to a file. The client then polls for the status could get malformed JSON without safe-read-write. 
 
 **Install, develop, test, use**
 
@@ -32,4 +32,3 @@ safeRead('/path/to/textfile')
   .then(data => ...);
 
 ```
-
