@@ -45,7 +45,7 @@ export function check(path, options = {}) {
 }
 
 export function safeWrite(path, data, options = { encoding: 'utf8' }) {
-  options.encoding = options.encoding || 'utf8';
+  // options.encoding = options.encoding || 'utf8';
   const lockPath = `${path}.lock`;
     // console.log(path, lockPath, data, options);
   return checkAndWait(lockPath).then(busy => {
